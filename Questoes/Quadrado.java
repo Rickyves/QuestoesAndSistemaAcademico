@@ -2,29 +2,40 @@ package Questoes;
 
 public class Quadrado {
 	double lado;
-	public Quadrado(double x) {
-		lado=x;
+	double Area;
+	double Perimetro;
+	
+	public Quadrado(double lado) {
+		this.lado = lado;
 	}
-	double area() {
-		double a=lado*lado;
-		return a;
-		
+	public double GetLado() {
+		return lado;
 	}
-	double perimetro() {
-		double p= 4*lado;
-		return p;
-		
+	public void SetLado(double lado) {
+		this.lado=lado;
+	}
+	public double GetArea() {
+		return Area;
+	}
+	public void SetArea(double Area) {
+		this.Area=Area*Area;
+	}
+	public double GetPerimetro() {
+		return Perimetro;
+	}
+	public void SetPerimetro(double Perimetro) {
+		this.Perimetro=4*Perimetro;
 	}
 	public static void main(String[] args) {
 		Quadrado q1=new Quadrado(2);
 		Quadrado q2=new Quadrado(4);
 		Quadrado q3=new Quadrado(5);
-		System.out.println(q1.area());
-		System.out.println(q1.perimetro());
-		System.out.println(q2.area());
-		System.out.println(q2.perimetro());
-		System.out.println(q3.area());
-		System.out.println(q3.perimetro());
+		System.out.println(q1.GetArea());
+		System.out.println(q1.GetPerimetro());
+		System.out.println(q2.GetArea());
+		System.out.println(q2.GetPerimetro());
+		System.out.println(q3.GetArea());
+		System.out.println(q3.GetPerimetro());
 		}
 }
 

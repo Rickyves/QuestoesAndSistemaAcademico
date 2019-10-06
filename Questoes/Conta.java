@@ -4,17 +4,17 @@ public class Conta {
 	String titular,agencia,DataAbertura;
 	int numero;
 	double saldo;
-	double sacar(double valor) {
+	public double getSaldoNovo() {
+		return saldo;
+	}
+	public void setSaque(double valor) {
 		saldo=saldo-valor;
-		return saldo;
 	}
-	double deposita(double valor) {
+	public void setDeposito(double valor) {
 		saldo=saldo+valor;
-		return saldo;
 	}
-	double CalculaRendimento() {
-		saldo=saldo*0.1;
-		return saldo;
+	public void CalculaRendimento() {
+		saldo=saldo+(saldo*0.1);
 	}
 	String recuperaDadosParaImpressao(){
 		return titular+" "+agencia+" "+numero+" "+DataAbertura+" "+saldo;

@@ -2,13 +2,13 @@ package Questoes;
 
 public class Lampada {
 	boolean ligada;
-	void liga() {
+	 public void Setliga() {
 		ligada=true;
 	}
-	void desligada() {
+	public void Setdesliga() {
 		ligada=false;
 	}
-	String observa() {
+	public String GetObserva() {
 		if(ligada=true) {
 			return "Ligada";
 		}
@@ -19,9 +19,9 @@ public class Lampada {
 	public static void main(String[] args) {
 		Lampada lampa1=new Lampada();
 		Lampada lampa2=new Lampada();
-		lampa1.liga();
-		lampa2.desligada();
-		System.out.println(lampa1.observa());
-		System.out.println(lampa2.observa());
+		lampa1.Setliga();
+		lampa2.Setdesliga();
+		System.out.println(lampa1.GetObserva());
+		System.out.println(lampa2.GetObserva());
 		}
 }

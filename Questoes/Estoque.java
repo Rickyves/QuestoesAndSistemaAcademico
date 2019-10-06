@@ -3,18 +3,29 @@ package Questoes;
 public class Estoque {
 	String nome;
 	int qtdAtual , qtdMinima;
-	public Estoque(String nome1, int qtdAtual1, int qtdMinima1) {
-		nome=nome1;
-		qtdAtual=qtdAtual1;
-		qtdMinima=qtdMinima1;
+	public Estoque(String nome, int qtdAtual, int qtdMinima) {
+		this.nome=nome;//Usar o this
+		this.qtdAtual=qtdAtual;
+		this.qtdMinima=qtdMinima;
 	}
 	public Estoque() {
 		
 	}
-	void mudarNome(String novonome) {
-		nome=novonome;
+	
+	public String getNome() {
+		return nome;
 	}
-	void mudarQtdMinima(int novaqtdMinima) {
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public void SetNovoNome(String nome) {
+		this.nome=nome;
+	}
+	
+	public int GetNovaQtdMinima() {
+		return qtdMinima;
+	}
+	public void SetNovaQtdMinima(int novaqtdMinima) {
 		qtdMinima=novaqtdMinima;
 	}
 	void repor(int qtd) {
